@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scritps/game_node2d.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Ball.png" type="Texture" id=2]
@@ -18,6 +18,10 @@ font_data = ExtResource( 5 )
 size = 25
 font_data = ExtResource( 5 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 9
+font_data = ExtResource( 5 )
+
 [node name="GameNode2D" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -35,21 +39,22 @@ texture = ExtResource( 3 )
 [node name="HUDNode" type="Node" parent="."]
 
 [node name="PlayerLeftGoalLabel" type="Label" parent="HUDNode"]
-margin_left = 330.462
-margin_top = 2.92883
-margin_right = 370.462
-margin_bottom = 28.9288
+margin_left = 175.0
+margin_top = 3.0
+margin_right = 381.0
+margin_bottom = 29.0
 custom_fonts/font = SubResource( 1 )
-text = "99"
+text = "11"
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="XLabel" type="Label" parent="HUDNode"]
-margin_left = 383.565
-margin_top = 16.7808
-margin_right = 423.565
-margin_bottom = 42.7808
+margin_left = 385.152
+margin_top = 18.7808
+margin_right = 425.152
+margin_bottom = 44.7808
 custom_fonts/font = SubResource( 2 )
 text = "x"
 __meta__ = {
@@ -57,12 +62,23 @@ __meta__ = {
 }
 
 [node name="PlayerRigthGoalLabel" type="Label" parent="HUDNode"]
-margin_left = 415.072
-margin_top = 1.30482
-margin_right = 465.072
-margin_bottom = 27.3048
+margin_left = 413.206
+margin_top = 2.0
+margin_right = 619.206
+margin_bottom = 28.0
 custom_fonts/font = SubResource( 3 )
-text = "99"
+text = "1111"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AuthorLabel" type="Label" parent="HUDNode"]
+margin_left = 531.616
+margin_top = 578.231
+margin_right = 792.616
+margin_bottom = 592.231
+custom_fonts/font = SubResource( 4 )
+text = "Feito pelo Catalunha, em 2021"
 __meta__ = {
 "_edit_use_anchors_": false
 }
